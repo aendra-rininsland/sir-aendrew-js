@@ -18,6 +18,10 @@ SirTrevor.Blocks.ImageExtended = SirTrevor.Blocks.Image.extend({
     this.$editor.html($('<img>', { src: data.file.url })).show();
     this.$editor.append($('<input>', {type: 'text', class: 'st-input-string js-caption-input', name: 'caption', placeholder: 'Caption', style: 'width: 100%; margin-top:10px; text-align: center;', value: data.caption}));
     this.$editor.append($('<input>', {type: 'text', class: 'st-input-string js-source-input', name: 'source', placeholder: 'Source', style: 'width: 100%; margin-top:10px; text-align: center;', value: data.source}));
+    this.$editor.append($('<label for="js-lightbox-input">Lightbox?</label>'));
+    this.$editor.append($('<input>', {type: 'checkbox', class: 'st-input-boolean js-lightbox-input', name: 'lightbox', style: '', value: data.lightbox}));
+    this.$editor.append($('<label for="js-stretch-input">Stretch?</label>'));
+    this.$editor.append($('<input>', {type: 'checkbox', class: 'st-input-boolean js-stretch-input', name: 'stretch', style: '', value: data.stretch}));
   },
 
   onBlockRender: function(){
