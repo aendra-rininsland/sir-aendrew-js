@@ -9,9 +9,9 @@ Adds "caption" and "source" fields to the image widget, as well as options to
 stretch and lightbox.
 
 ###### Configuration
-Add to `blockTypes` as `ImageExtended`.
+Add to `blockTypes` as `ImageExtended`. Optionally, remove `Image` from `blockTypes`.
 
-### ooyala.js
+#### ooyala.js
 Replaces the video widget with one that supports using Ooyala embed codes.
 
 ###### Configuration

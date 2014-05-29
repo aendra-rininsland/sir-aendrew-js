@@ -31,6 +31,8 @@ SirTrevor.Blocks.VideoOoyala = (function(){
       var container_id = makeid();
       var embed_string = "<div id='" + container_id + "' style='width:1280px;height:720px; margin-bottom: 30px;'></div><script>OO.ready(function() { OO.Player.create('" + container_id + "', '" + data.embedcode + "'); });</script><noscript><div>Please enable Javascript to watch this video</div></noscript>";
       this.$editor.html(embed_string);
+      this.$editor.append($('<input>', {type: 'text', class: 'st-input-string js-caption-input', name: 'caption', placeholder: 'Caption', style: 'width: 100%; margin-top:10px; text-align: center;', value: data.caption}));
+      this.$editor.append($('<input>', {type: 'text', class: 'st-input-string js-source-input', name: 'source', placeholder: 'Source', style: 'width: 100%; margin-top:10px; text-align: center;', value: data.source}));
     },
 
     onContentPasted: function(event){
