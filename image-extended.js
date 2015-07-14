@@ -29,7 +29,7 @@ SirTrevor.Blocks.ImageExtended = SirTrevor.Blocks.Image.extend({
     this.$inputs.find('button').bind('click', function(ev){ ev.preventDefault(); });
     this.$inputs.find('input').on('change', _.bind(function(ev){
       this.onDrop(ev.currentTarget);
-    }, this));
+    }, this)).prop('accept','image/*');
   },
 
 	onDrop: function(transferData){
